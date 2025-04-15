@@ -1,0 +1,87 @@
+:root {
+    --button-color: #47A5C4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+head {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    margin-top: 50px;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+#dice {
+    transform: scale(10, 10);
+}
+
+.rotate-dice {
+    animation: rotate-dice 2s ease;
+}
+
+@keyframes rotate-dice {
+    from {
+        transform: scale(10, 10) rotateX(0deg) rotateY(0deg);
+    }
+
+    to {
+        transform: scale(10, 10) rotateX(360deg) rotateY(360deg);
+    }
+}
+
+h1 {
+    font-size: 48px;
+    text-align: center;
+    font-weight: 600;
+}
+
+button {
+    margin-top: 50px;
+    background-color: var(--button-color, blue);
+    border-radius: 10px;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 24px;
+}
+
+.dice-history {
+    width: 40%;
+    margin: 0px auto;
+    gap: 16px;
+}
+
+.dice-history-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: #F2F2F2;
+    padding: 24px 16px;
+    border-radius: 10px;
+}
+
+.dice-history-item span {
+    transform: scale(3, 3);
+}
+
+.dice-history-item h2 {
+    font-weight: 300;
+    font-size: 24px;
+}
